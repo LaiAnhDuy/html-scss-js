@@ -1,0 +1,135 @@
+body {
+  font: {
+    size: 14px;
+    family: "Inter";
+  }
+  color: #252c32;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font : {
+    size: 24px;
+    weight: 600;
+  }
+  .icon {
+    display: flex;
+    column-gap: 10px;
+  }
+}
+.home {
+  width: 70vw;
+  margin: auto;
+  .nav {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 12px;
+    .card {
+      color: #6e7c87;
+    }
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 10px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  .list-item {
+    grid-column: span 1 / span 1;
+    .image {
+      width: 100%;
+    }
+    .clicked {
+      border: 1px solid #5a4949;
+    }
+    @media (max-width: 768px) {
+      .image {
+        width: 10%;
+      }
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .item {
+    grid-column: span 6 / span 6;
+    .image {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      order: 1;
+    }
+  }
+
+  .description {
+    grid-column: span 5 / span 5;
+    margin-left: 20px;
+    @media (max-width: 768px) {
+      order: 3;
+      margin-left: 0;
+    }
+    .new {
+      border-radius: 6px;
+      padding: 8px;
+      background-color: #eef0f2;
+      width: max-content;
+      font-weight: 600;
+    }
+    .shirt-name {
+      font : {
+        size: 36px;
+        weight: 700;
+      }
+    }
+    #code {
+      color: #6e7c87;
+    }
+    .button {
+      border: 0px;
+      padding: 8px 16px 8px 16px;
+      background-color: #f6f8f9;
+    }
+    .button:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    .button:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .size {
+      border: 0px;
+      padding: 8px 16px 8px 16px;
+      background-color: #e5e9eb;
+    }
+    .add-cart {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      color: #f6f8f9;
+      background-color: #4094f7;
+      border-radius: 6px;
+    }
+    .add-wishlist {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+      align-items: center;
+    }
+  }
+}
+

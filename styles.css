@@ -1,0 +1,137 @@
+body {
+  font-size: 14px;
+  font-family: "Inter";
+  color: #252c32;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.header .icon {
+  display: flex;
+  column-gap: 10px;
+}
+
+.home {
+  width: 70vw;
+  margin: auto;
+}
+.home .nav {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 12px;
+}
+.home .nav .card {
+  color: #6e7c87;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 10px;
+}
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.content .list-item {
+  grid-column: span 1/span 1;
+}
+.content .list-item .image {
+  width: 100%;
+}
+.content .list-item .clicked {
+  border: 1px solid #5a4949;
+}
+@media (max-width: 768px) {
+  .content .list-item {
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .content .list-item .image {
+    width: 10%;
+  }
+}
+.content .item {
+  grid-column: span 6/span 6;
+}
+.content .item .image {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .content .item {
+    order: 1;
+  }
+}
+.content .description {
+  grid-column: span 5/span 5;
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .content .description {
+    order: 3;
+    margin-left: 0;
+  }
+}
+.content .description .new {
+  border-radius: 6px;
+  padding: 8px;
+  background-color: #eef0f2;
+  width: max-content;
+  font-weight: 600;
+}
+.content .description .shirt-name {
+  font-size: 36px;
+  font-weight: 700;
+}
+.content .description #code {
+  color: #6e7c87;
+}
+.content .description .button {
+  border: 0px;
+  padding: 8px 16px 8px 16px;
+  background-color: #f6f8f9;
+}
+.content .description .button:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.content .description .button:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.content .description .size {
+  border: 0px;
+  padding: 8px 16px 8px 16px;
+  background-color: #e5e9eb;
+}
+.content .description .add-cart {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  color: #f6f8f9;
+  background-color: #4094f7;
+  border-radius: 6px;
+}
+.content .description .add-wishlist {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
